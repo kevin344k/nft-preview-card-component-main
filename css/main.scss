@@ -1,0 +1,209 @@
+//# Front-end Style Guide
+
+//## Layout
+
+//The designs were created to the following widths:
+
+//- Mobile: 375px
+//- Desktop: 1440px
+
+//## Colors
+
+//### Primary
+
+$Soft_blue: hsl(215, 51%, 70%);
+$Cyan: hsl(178, 100%, 50%);
+
+//### Neutral
+
+$Very_dark_blue_main_BG: hsl(217, 54%, 11%);
+$Very_dark_blue_card_BG: hsl(216, 50%, 16%);
+$Very_dark_blue_line: hsl(215, 32%, 27%);
+$White: hsl(0, 0%, 100%);
+
+//## Typography
+
+//### Body Copy
+
+$Font_size_paragraph: 18px;
+
+//### Font
+
+$Family_Outfit: "Outfit", sans-serif;
+
+html {
+  font-size: 62.5%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  background-color: $Very_dark_blue_main_BG;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  section {
+    width: 90%;
+    max-width: 300px;
+    min-width: 250px;
+    height: auto;
+    background-color: $Very_dark_blue_card_BG;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    .section--img {
+      width: 100%;
+      height: 280px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+    
+      img {
+        width: 100%;
+        height: 100%;
+       
+      }
+      .div--over-view {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.4;
+        background-color: $Cyan;
+      }
+      .ico-view {
+        display: none;
+        position: absolute;
+        top: calc(50% - 25px);
+        left:  calc(50% - 25px);;
+
+        background-image: url("../images/icon-view.svg");
+        width: 50px;
+        height: 50px;
+        background-repeat: no-repeat;
+        background-position: center;
+       
+      }
+      &:hover .div--over-view ,
+      &:hover .ico-view {
+     
+            display: block;
+            cursor: pointer;
+           
+          
+      }
+    }
+    .card--footer {
+      font-family: $Family_Outfit;
+      font-size: $Font_size_paragraph;
+      color: $White;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      h2{
+        font-weight: 600;
+        font-size: 2rem;
+        &:hover{
+            color: $Cyan;
+            cursor: pointer;
+        }
+      }
+      p{
+        font-weight: 300;
+        color: $Soft_blue;
+        line-height: 25px;
+        font-size: 1.4rem;
+      }
+      .div--price-timeleft{
+        display: flex;
+        gap: 30px;
+        justify-content: space-between;
+        .div-eth{
+            display: flex;
+        
+            align-items: center;
+          
+            .ico-eth{
+                background-image: url("../images/icon-ethereum.svg");
+                width: 20px;
+                height: 30px;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            p{
+                color: $Cyan;
+        
+                font-weight: 600;
+                font-family: $Family_Outfit;
+            }
+
+        }
+        .div-time{
+            display: flex;
+        
+            align-items: center;
+          
+            .ico-time{
+             
+                background-image: url("../images/icon-clock.svg");
+                width: 20px;
+                height: 30px;
+                background-repeat: no-repeat;
+                background-position: center;
+                margin-right: 5px;
+            }
+            p{
+                font-weight: 600;
+                font-family: $Family_Outfit;
+            }
+        }
+        border-bottom: 1px solid $Very_dark_blue_line;
+        padding-bottom: 10px;
+      }
+      .div--user-creator{
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        .span--user-img{
+            display: block;
+            background-image: url("../images/image-avatar.png");
+            width: 30px;
+            height: 30px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            border-radius: 50%;
+            border: 1px solid $White;
+            margin-right: 15px;
+            
+        }
+        p{
+            color: $White;
+            font-weight: 400;
+            span{
+                color: $Soft_blue;
+            }
+        }
+      }
+    }
+  }
+}
+
+@media(min-width:1440px){
+    main{
+        section{
+            box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.375);
+        }
+    }
+}

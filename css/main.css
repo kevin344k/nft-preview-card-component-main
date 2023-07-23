@@ -1,0 +1,160 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  background-color: hsl(217, 54%, 11%);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section {
+  width: 90%;
+  max-width: 300px;
+  min-width: 250px;
+  height: auto;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+}
+main section .section--img {
+  width: 100%;
+  height: 280px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+main section .section--img img {
+  width: 100%;
+  height: 100%;
+}
+main section .section--img .div--over-view {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.4;
+  background-color: hsl(178, 100%, 50%);
+}
+main section .section--img .ico-view {
+  display: none;
+  position: absolute;
+  top: calc(50% - 25px);
+  left: calc(50% - 25px);
+  background-image: url("../images/icon-view.svg");
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+main section .section--img:hover .div--over-view, main section .section--img:hover .ico-view {
+  display: block;
+  cursor: pointer;
+}
+main section .card--footer {
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+main section .card--footer h2 {
+  font-weight: 600;
+  font-size: 2rem;
+}
+main section .card--footer h2:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+main section .card--footer p {
+  font-weight: 300;
+  color: hsl(215, 51%, 70%);
+  line-height: 25px;
+  font-size: 1.4rem;
+}
+main section .card--footer .div--price-timeleft {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  border-bottom: 1px solid hsl(215, 32%, 27%);
+  padding-bottom: 10px;
+}
+main section .card--footer .div--price-timeleft .div-eth {
+  display: flex;
+  align-items: center;
+}
+main section .card--footer .div--price-timeleft .div-eth .ico-eth {
+  background-image: url("../images/icon-ethereum.svg");
+  width: 20px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+main section .card--footer .div--price-timeleft .div-eth p {
+  color: hsl(178, 100%, 50%);
+  font-weight: 600;
+  font-family: "Outfit", sans-serif;
+}
+main section .card--footer .div--price-timeleft .div-time {
+  display: flex;
+  align-items: center;
+}
+main section .card--footer .div--price-timeleft .div-time .ico-time {
+  background-image: url("../images/icon-clock.svg");
+  width: 20px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 5px;
+}
+main section .card--footer .div--price-timeleft .div-time p {
+  font-weight: 600;
+  font-family: "Outfit", sans-serif;
+}
+main section .card--footer .div--user-creator {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+main section .card--footer .div--user-creator .span--user-img {
+  display: block;
+  background-image: url("../images/image-avatar.png");
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-radius: 50%;
+  border: 1px solid hsl(0, 0%, 100%);
+  margin-right: 15px;
+}
+main section .card--footer .div--user-creator p {
+  color: hsl(0, 0%, 100%);
+  font-weight: 400;
+}
+main section .card--footer .div--user-creator p span {
+  color: hsl(215, 51%, 70%);
+}
+
+@media (min-width: 1440px) {
+  main section {
+    box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.375);
+  }
+}/*# sourceMappingURL=main.css.map */
